@@ -14,7 +14,7 @@ export const AboutPage: React.FC = () => {
     <div className="pt-32 pb-24 bg-[#050505] text-[#F2F0EA] min-h-screen">
       <SeoHead
         title="Studio Philosophy & About — Orchid Solution"
-        description="Learn about Orchid Solution, an independent digital technology studio serving ambitious businesses across India."
+        description="Learn about Orchid Solution, an independent digital technology studio founded by Ayush Sharma serving ambitious businesses across India."
       />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mb-16">
         
@@ -46,6 +46,20 @@ export const AboutPage: React.FC = () => {
             </p>
             <p className="text-[#F2F0EA]">
               From Bengaluru to Delhi NCR, Mumbai, Goa, and Jaipur — we partner directly with founders and business leaders across India.
+            </p>
+          </div>
+        </div>
+
+        {/* Leadership Block */}
+        <div className="py-12 border-b border-[#F2F0EA]/12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-5 space-y-1">
+            <span className="font-mono text-xs text-[#B79CFF] tracking-widest uppercase block mb-2">STUDIO LEADERSHIP</span>
+            <h3 className="font-display text-3xl font-normal text-[#F2F0EA]">AYUSH SHARMA</h3>
+            <p className="font-mono text-xs text-[#9A9892] tracking-wider uppercase">FOUNDER & SENIOR DEVELOPER</p>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="text-[#9A9892] font-light text-base leading-relaxed">
+              Founded by <span className="text-[#F2F0EA]">Ayush Sharma</span>, Orchid Solution is built on a hands-on engineering methodology. As Founder and Senior Developer, Ayush leads the studio's architectural design, full-stack web development, and AI workflow integration for clients across India.
             </p>
           </div>
         </div>

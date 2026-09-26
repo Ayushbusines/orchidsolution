@@ -29,20 +29,26 @@ export const AboutStudio: React.FC = () => {
             </p>
 
             <p className="text-sm text-[#9A9892] font-light leading-relaxed max-w-xl">
-              We bridge the gap between high-end aesthetic visual design and technical backend execution. Whether you are a growing startup in Bengaluru, a healthcare clinic in Mumbai, a real estate group in Goa, or a service business in Delhi NCR — we craft digital infrastructure that performs.
+              We bridge the gap between high-end aesthetic visual design and technical backend execution. Led by Founder & Senior Developer Ayush Sharma, we craft digital infrastructure that performs for growing startups and established businesses nationwide.
             </p>
 
             <div className="pt-6 border-t border-[#F2F0EA]/12 flex flex-wrap gap-8 font-mono text-xs text-[#9A9892]">
               <div>
+                <span className="text-[#F2F0EA] block font-bold">FOUNDER</span>
+                <span className="text-[#B79CFF]">AYUSH SHARMA</span>
+                <span className="block text-[11px]">FOUNDER & SENIOR DEVELOPER</span>
+              </div>
+              <div className="w-[1px] h-10 bg-[#F2F0EA]/12 hidden sm:block" />
+              <div>
                 <span className="text-[#F2F0EA] block font-bold">BASED IN</span>
                 <span>INDIA</span>
               </div>
-              <div className="w-[1px] h-8 bg-[#F2F0EA]/12 hidden sm:block" />
+              <div className="w-[1px] h-10 bg-[#F2F0EA]/12 hidden sm:block" />
               <div>
                 <span className="text-[#F2F0EA] block font-bold">COVERAGE</span>
                 <span>WORKING ACROSS INDIA</span>
               </div>
-              <div className="w-[1px] h-8 bg-[#F2F0EA]/12 hidden sm:block" />
+              <div className="w-[1px] h-10 bg-[#F2F0EA]/12 hidden sm:block" />
               <div>
                 <span className="text-[#F2F0EA] block font-bold">CAPABILITIES</span>
                 <span>DESIGN + DEV + AI + AUTOMATION</span>
@@ -61,13 +67,17 @@ export const AboutStudio: React.FC = () => {
             <div className="relative rounded-lg overflow-hidden border border-[#F2F0EA]/12 bg-[#090909]">
               <img
                 src="/assets/orchid_hero_sculpture_1790414553346.jpg"
-                alt="Orchid Studio Interior Aesthetics"
+                alt="Orchid Studio Aesthetics"
                 className="w-full h-[400px] lg:h-[520px] object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-transparent to-transparent opacity-80" />
 
-              <div className="absolute bottom-6 left-6 right-6 font-mono text-xs text-[#9A9892] bg-[#090909]/90 backdrop-blur-md p-4 border border-[#F2F0EA]/12 rounded">
-                <p className="text-[#F2F0EA] font-medium mb-1">"WE DON'T JUST BUILD WEBSITES.</p>
+              <div className="absolute bottom-6 left-6 right-6 font-mono text-xs text-[#9A9892] bg-[#090909]/90 backdrop-blur-md p-4 border border-[#F2F0EA]/12 rounded space-y-2">
+                <div className="flex items-center justify-between border-b border-[#F2F0EA]/12 pb-2">
+                  <span className="text-[#F2F0EA] font-bold">AYUSH SHARMA</span>
+                  <span className="text-[#B79CFF] text-[11px]">FOUNDER & SENIOR DEVELOPER</span>
+                </div>
+                <p className="text-[#F2F0EA] font-medium pt-1">"WE DON'T JUST BUILD WEBSITES.</p>
                 <p className="text-[#B79CFF]">WE BUILD DIGITAL SYSTEMS."</p>
               </div>
             </div>
