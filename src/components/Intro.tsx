@@ -13,12 +13,18 @@ export const Intro: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-4"
+            className="lg:col-span-4 space-y-1"
           >
             <span className="font-mono text-xs text-[#B79CFF] tracking-widest uppercase block mb-2">
               01 / ABOUT ORCHID
             </span>
-            <p className="font-mono text-xs text-[#9A9892] tracking-wider uppercase">
+            <p className="font-mono text-xs text-[#F2F0EA] font-semibold tracking-wider uppercase">
+              AYUSH SHARMA
+            </p>
+            <p className="font-mono text-[11px] text-[#9A9892] tracking-wider uppercase">
+              FOUNDER & SENIOR DEVELOPER
+            </p>
+            <p className="font-mono text-[11px] text-[#9A9892]/60 tracking-wider uppercase pt-2">
               INDIA-WIDE DIGITAL STUDIO
             </p>
           </motion.div>
@@ -44,7 +50,7 @@ export const Intro: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg sm:text-xl text-[#9A9892] font-light max-w-2xl leading-relaxed"
             >
-              Orchid Solution creates websites, digital experiences, AI systems and automation workflows designed around how modern businesses actually operate.
+              Founded by <span className="text-[#F2F0EA] font-normal">Ayush Sharma</span>, Orchid Solution creates websites, digital experiences, AI systems and automation workflows designed around how modern businesses actually operate.
             </motion.p>
           </div>
 
