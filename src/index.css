@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #090909;
+    --bg-charcoal: #111111;
+    --bg-outer: #050505;
+    --bg-surface: #0B0B0B;
+    --text-primary: #F2F0EA;
+    --text-secondary: #9A9892;
+    --border-color: rgba(242, 240, 234, 0.12);
+    --orchid-violet: #B79CFF;
+    --muted-lilac: #8C7AAE;
+  }
+
+  body {
+    background-color: var(--bg-outer);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #B79CFF;
+    color: #090909;
+  }
+}
+
+/* Custom Typography Utilities */
+.font-display {
+  font-family: 'Instrument Sans', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(242, 240, 234, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B79CFF;
+}
+
+/* Smooth Editorial Grain overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(242, 240, 234, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Underline Form Input Styling */
+.input-underline {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(242, 240, 234, 0.2);
+  color: #F2F0EA;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.input-underline:focus {
+  outline: none;
+  border-bottom-color: #B79CFF;
+}
+
+/* Custom Subtle Glass effect */
+.glass-panel {
+  background: rgba(11, 11, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242, 240, 234, 0.12);
+}
+
+/* Hide scrollbar for clean horizontal filter scroll if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
