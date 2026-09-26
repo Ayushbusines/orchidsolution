@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PROJECTS_DATA } from '../data/projectsData';
-import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Globe } from 'lucide-react';
 import { SeoHead } from '../components/SeoHead';
 
 export const ProjectDetailPage: React.FC = () => {
@@ -73,6 +73,20 @@ export const ProjectDetailPage: React.FC = () => {
               <span className="text-[#F2F0EA] block">YEAR</span>
               <span>{project.year}</span>
             </div>
+            {project.liveUrl && (
+              <div>
+                <span className="text-[#F2F0EA] block">LIVE WEBSITE</span>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#B79CFF] hover:underline inline-flex items-center gap-1 font-mono text-xs mt-0.5"
+                >
+                  <span>{project.liveUrl.replace(/^https?:\/\//, '')}</span>
+                  <ArrowUpRight className="w-3 h-3" />
+                </a>
+              </div>
+            )}
           </div>
         </div>
 
@@ -166,7 +180,18 @@ export const ProjectDetailPage: React.FC = () => {
                 ))}
               </div>
 
-              <div className="pt-4 border-t border-[#F2F0EA]/12">
+              <div className="pt-4 border-t border-[#F2F0EA]/12 flex flex-col gap-3">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#B79CFF] text-[#090909] font-mono text-xs font-bold rounded-sm hover:bg-[#a382ff] transition-colors"
+                  >
+                    <span>VISIT LIVE WEBSITE</span>
+                    <Globe className="w-4 h-4" />
+                  </a>
+                )}
                 <Link
                   to="/contact"
                   className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-[#F2F0EA] text-[#090909] font-mono text-xs font-bold rounded-sm hover:bg-[#B79CFF] transition-colors"

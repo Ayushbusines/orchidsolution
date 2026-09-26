@@ -7,10 +7,10 @@ export const TestimonialsSection: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "Orchid Solution redesigned our architecture studio website from the ground up. The design is quiet, modern, and expensive-looking. Our WhatsApp inquiry rate tripled within a month.",
-      author: "Vikramaditya S.",
-      role: "Managing Principal",
-      company: "Lumina Living Architecture",
+      quote: "Orchid Solution transformed our clinic platform with an editorial design and lightweight custom CMS. Our digital presence now matches our 40,000+ patient offline reputation.",
+      author: "Dr. Triveni",
+      role: "Founder & Chief Surgeon",
+      company: "Triveni Dental Clinic",
     },
     {
       quote: "The AI voice agent and WhatsApp workflow built by Orchid eliminated over 70% of phone inquiry overhead for our medical clinics. Truly remarkable execution.",

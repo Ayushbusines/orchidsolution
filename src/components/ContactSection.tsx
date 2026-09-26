@@ -138,7 +138,7 @@ export const ContactSection: React.FC = () => {
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g. Lumina Living"
+                      placeholder="e.g. Triveni Clinic"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="input-underline text-sm font-light placeholder:text-[#9A9892]/40"

@@ -29,7 +29,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Custom Iconography & Graphic Assets',
       'Design System Style Guide'
     ],
-    previewVisual: '/assets/project_lumina_estate_1790414583940.jpg',
+    previewVisual: '/assets/project_triveni_dental.jpg',
     slug: 'web-design'
   },
   {
@@ -50,7 +50,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'CMS Integration (Headless / Sanity / Shopify)',
       'Automated CI/CD Deployment Setup'
     ],
-    previewVisual: '/assets/project_lumina_estate_1790414583940.jpg',
+    previewVisual: '/assets/project_triveni_dental.jpg',
     slug: 'web-development'
   },
   {
@@ -134,7 +134,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Meta Pixel & Google Analytics Tracking Setup',
       'Speed & Performance Optimization'
     ],
-    previewVisual: '/assets/project_lumina_estate_1790414583940.jpg',
+    previewVisual: '/assets/project_triveni_dental.jpg',
     slug: 'landing-pages'
   },
   {
