@@ -28,11 +28,48 @@ export const HomePage: React.FC = () => {
     }
   }, [location]);
 
+  const homeSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Orchid Solution',
+      'url': 'https://www.orchidsolution.online/',
+      'logo': 'https://www.orchidsolution.online/assets/orchid_hero_sculpture_1790414553346.jpg',
+      'telephone': '+917840874899',
+      'email': 'ayushskumar212@gmail.com',
+      'founder': {
+        '@type': 'Person',
+        'name': 'Ayush Sharma',
+        'jobTitle': 'Founder & Senior Developer'
+      },
+      'areaServed': {
+        '@type': 'Country',
+        'name': 'India'
+      },
+      'description': 'Orchid Solution creates premium websites, digital experiences, AI solutions and automation systems for businesses across India.',
+      'knowsAbout': [
+        'Website Design',
+        'Web Development',
+        'AI Solutions',
+        'Workflow Automation',
+        'AI Call Agents',
+        'UI/UX Design'
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      'name': 'Orchid Solution',
+      'url': 'https://www.orchidsolution.online/'
+    }
+  ];
+
   return (
     <main className="w-full">
       <SeoHead
         title="Orchid Solution — Web Design, AI & Automation Studio India"
         description="Orchid Solution creates premium websites, digital experiences, AI solutions and automation systems for businesses across India."
+        schema={homeSchema}
       />
       <Hero />
       <Intro />

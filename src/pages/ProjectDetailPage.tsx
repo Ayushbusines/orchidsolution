@@ -29,11 +29,63 @@ export const ProjectDetailPage: React.FC = () => {
 
   const nextProject = PROJECTS_DATA[(projectIndex + 1) % PROJECTS_DATA.length];
 
+  const projectSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.orchidsolution.online/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Selected Work & Portfolio',
+          'item': 'https://www.orchidsolution.online/portfolio'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': project.title,
+          'item': `https://www.orchidsolution.online/portfolio/${project.id}`
+        }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      'name': project.title,
+      'headline': `${project.title} — Digital Case Study`,
+      'description': project.summary,
+      'image': `https://www.orchidsolution.online${project.image}`,
+      'url': `https://www.orchidsolution.online/portfolio/${project.id}`,
+      'dateCreated': project.year,
+      'genre': project.category,
+      'creator': {
+        '@type': 'Organization',
+        'name': 'Orchid Solution',
+        'url': 'https://www.orchidsolution.online/'
+      },
+      'provider': {
+        '@type': 'Organization',
+        'name': 'Orchid Solution',
+        'url': 'https://www.orchidsolution.online/'
+      },
+      'keywords': project.techStack.join(', ')
+    }
+  ];
+
   return (
     <div className="pt-32 pb-24 bg-[#090909] text-[#F2F0EA] min-h-screen">
       <SeoHead
         title={`${project.title} — Case Study | Orchid Solution`}
         description={project.summary}
+        ogImage={`https://www.orchidsolution.online${project.image}`}
+        ogType="article"
+        schema={projectSchema}
       />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         

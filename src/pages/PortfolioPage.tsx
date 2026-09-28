@@ -23,11 +23,59 @@ export const PortfolioPage: React.FC = () => {
 
   const categories = ['ALL', 'WEBSITES', 'UI/UX', 'AI', 'AUTOMATION', 'LANDING PAGES'];
 
+  const portfolioSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.orchidsolution.online/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Selected Work & Portfolio',
+          'item': 'https://www.orchidsolution.online/portfolio'
+        }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      'name': 'Selected Work & Digital Case Studies',
+      'description': 'Digital experiences and systems built for ambitious Indian businesses.',
+      'url': 'https://www.orchidsolution.online/portfolio',
+      'mainEntity': {
+        '@type': 'ItemList',
+        'itemListElement': PROJECTS_DATA.map((project, index) => ({
+          '@type': 'ListItem',
+          'position': index + 1,
+          'item': {
+            '@type': 'CreativeWork',
+            'name': project.title,
+            'description': project.summary,
+            'url': `https://www.orchidsolution.online/portfolio/${project.id}`,
+            'image': `https://www.orchidsolution.online${project.image}`,
+            'creator': {
+              '@type': 'Organization',
+              'name': 'Orchid Solution',
+              'url': 'https://www.orchidsolution.online/'
+            }
+          }
+        }))
+      }
+    }
+  ];
+
   return (
     <div className="pt-32 pb-24 bg-[#050505] min-h-screen text-[#F2F0EA]">
       <SeoHead
         title="Selected Work & Portfolio — Orchid Solution"
-        description="Explore case studies and digital experiences built by Orchid Solution for businesses across India."
+        description="Explore case studies in website design, AI triage systems, and business workflow automation built by Orchid Solution for clients across India."
+        schema={portfolioSchema}
       />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         

@@ -18,11 +18,54 @@ export const ServicesPage: React.FC = () => {
     }
   }, [location]);
 
+  const servicesSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.orchidsolution.online/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Services & Capabilities',
+          'item': 'https://www.orchidsolution.online/services'
+        }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      'name': 'Orchid Solution Services & Capabilities',
+      'url': 'https://www.orchidsolution.online/services',
+      'itemListElement': SERVICES_DATA.map((service, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'item': {
+          '@type': 'Service',
+          'name': service.title,
+          'description': service.fullDesc,
+          'url': `https://www.orchidsolution.online/services#${service.slug}`,
+          'provider': {
+            '@type': 'Organization',
+            'name': 'Orchid Solution',
+            'url': 'https://www.orchidsolution.online/'
+          }
+        }
+      }))
+    }
+  ];
+
   return (
     <div className="pt-32 pb-24 bg-[#090909] text-[#F2F0EA] min-h-screen">
       <SeoHead
-        title="Services & Capabilities — Orchid Solution"
+        title="Website Design, AI & Automation Services — Orchid Solution"
         description="Comprehensive website design, web development, AI solutions, call agents, and workflow automation services across India."
+        schema={servicesSchema}
       />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         

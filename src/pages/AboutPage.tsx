@@ -10,11 +10,50 @@ export const AboutPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const aboutSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.orchidsolution.online/'
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Studio Philosophy & About',
+          'item': 'https://www.orchidsolution.online/about'
+        }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      'name': 'Studio Philosophy & About Orchid Solution',
+      'url': 'https://www.orchidsolution.online/about',
+      'description': 'Orchid Solution is an independent digital technology studio founded by Ayush Sharma building website design, AI integrations, and workflow automation across India.',
+      'mainEntity': {
+        '@type': 'Organization',
+        'name': 'Orchid Solution',
+        'url': 'https://www.orchidsolution.online/',
+        'founder': {
+          '@type': 'Person',
+          'name': 'Ayush Sharma',
+          'jobTitle': 'Founder & Senior Developer'
+        }
+      }
+    }
+  ];
+
   return (
     <div className="pt-32 pb-24 bg-[#050505] text-[#F2F0EA] min-h-screen">
       <SeoHead
-        title="Studio Philosophy & About — Orchid Solution"
+        title="About Orchid Solution — Digital Technology Studio India"
         description="Learn about Orchid Solution, an independent digital technology studio founded by Ayush Sharma serving ambitious businesses across India."
+        schema={aboutSchema}
       />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mb-16">
         
